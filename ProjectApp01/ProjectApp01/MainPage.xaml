@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectApp01.MainPage">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="Aquamarine">
+            <Label
+                Text="Form to CV"
+                FontSize="Large"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                Padding="6"
+                />
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Name:" TextColor="Chocolate"></Label>
+                <Entry Placeholder="Enter your name" x:Name="EntryName"/>
+                <Label Text="Age:" TextColor="Chocolate"></Label>
+                <Entry Placeholder="Enter your age" x:Name="EntryAge"/>
+                <Label Text="Occupation:" TextColor="Chocolate"></Label>
+                <Entry Placeholder="Enter your occupation" x:Name="EntryOccupation"/>
+                <Label Text="Nationality:" TextColor="Chocolate"></Label>
+                <Entry Placeholder="Enter your Nationality" x:Name="EntryNationality"/>
+                <Label Text="Contact:" TextColor="Chocolate"></Label>
+                <Entry Placeholder="Enter your number" x:Name="EntryNumber"/>
+                <Entry Placeholder="Enter your email" x:Name="EntryEmail"/>
+                <Label Text="Work Experience:" TextColor="Chocolate"></Label>
+                <StackLayout x:Name="Layout_experience">
+                    <Entry Placeholder="Enter your Experience" x:Name="Entry_Experience"/>
+                </StackLayout>
+                <Button Text="+" Clicked="Button_clicked_experience"/>
+                <Label Text="Skills" TextColor="DarkTurquoise"/>
+                <StackLayout x:Name="Layout_skill">
+                    <Entry Placeholder="Enter your Skill" x:Name="Entry_Skill"/>
+                </StackLayout>
+                <Button Text="+" Clicked="Button_clicked_skill" />
+                <Label Text="Education" TextColor="DarkTurquoise"/>
+                <StackLayout x:Name="Layout_education">
+                    <Entry Placeholder="Enter your education" x:Name="Entry_Education"/>
+                </StackLayout>
+                <Button Text="+" Clicked="Button_clicked_education" />
+
+                <Button
+                    Text="Submit"
+                    BackgroundColor="HotPink"
+                    TextColor="Blue"
+                    Clicked="Button_Submit_Clicked"
+                    FontSize="Medium"
+                    />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

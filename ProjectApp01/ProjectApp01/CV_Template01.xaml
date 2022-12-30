@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectApp01.CV_Template01">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView >
+                <Grid x:Name="CV_Content"
+                      ColumnSpacing="0"
+                      RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="500" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView BackgroundColor="#02c39a"
+                             Grid.ColumnSpan="2"/>
+
+                    <!--Header-->
+                    <StackLayout  Grid.ColumnSpan="2"
+                                  VerticalOptions="Center">
+                        <Label x:Name="LabelName"
+                               FontSize="30"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+                        <Label x:Name="LabelOccupation"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <!--Body-->
+                    <StackLayout Grid.Row="1" Margin="20">
+                        <Label Text="Contact:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label x:Name="LabelNumber"/>
+                            <Label x:Name="LabelEmail"/>
+                        </StackLayout>
+
+                        <Label Text="Nationality:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label x:Name="LabelNationality"/>
+                        </StackLayout>
+
+                        <Label Text="Age:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label x:Name="LabelAge"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1"
+                                 Grid.Column="1">
+                        <Label Text="Skills"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               BackgroundColor="#02c39a"
+                               Padding="1" 
+                               Margin="20,20,20,0"/>
+                        <StackLayout x:Name="StackSkill"
+                                     Margin="20,0,20,0">
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Education"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               Padding="1" 
+                               Margin="20"
+                               BackgroundColor="#02c39a"/>
+                        <StackLayout x:Name="StackEducation"
+                                     Margin="20,0,20,0">
+                        </StackLayout>
+
+                        <Label Text="Work Experience"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               Padding="1" 
+                               Margin="20"
+                               BackgroundColor="#02c39a"/>
+                        <StackLayout x:Name="StackExp"
+                                     Margin="20,0,20,0">
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
