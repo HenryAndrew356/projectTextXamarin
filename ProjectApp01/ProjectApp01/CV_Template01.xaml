@@ -104,6 +104,16 @@
                     </StackLayout>
                 </Grid>
             </ScrollView>
+            <Button
+                Text="Save by Gmail"
+                Clicked="Button_Clicked_GeneradePDF"
+                FontSize="Medium"
+                BackgroundColor="DarkBlue"
+                TextColor="Azure"
+                BorderColor="Fuchsia"
+                BorderWidth="1"
+                Margin="20"
+                />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

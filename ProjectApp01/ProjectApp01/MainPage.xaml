@@ -6,7 +6,7 @@
     <StackLayout>
         <StackLayout BackgroundColor="Aquamarine">
             <Label
-                Text="Form to CV"
+                Text="Formulario CV"
                 FontSize="Large"
                 TextColor="White"
                 HorizontalTextAlignment="Center"

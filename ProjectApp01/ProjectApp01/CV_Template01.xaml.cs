@@ -1,18 +1,15 @@
-﻿using System;
+﻿using PdfSharp.Xamarin.Forms;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-//Estos no habian
-using PdfSharp.Xamarin.Forms;
-using System.IO;
-using System.Runtime.InteropServices.ComTypes;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.Xaml;
 
 namespace ProjectApp01
 {
@@ -47,6 +44,20 @@ namespace ProjectApp01
                 var label = new Label { Text = i };
                 StackEducation.Children.Add(label);
             }
+        }
+        private async void Button_Clicked_GeneradePDF(object sender, EventArgs e)
+        {
+            var pdf = PDFManager.GeneratePDFFromView(CV_Content);
+            string filename = "MyCV.pdf";
+            string path = System.IO.Path.Combine(FileSystem.CacheDirectory, filename);
+            pdf.Save(path);
+            var message = new EmailMessage
+            {
+                Subject = "",
+                Body = "",
+            };
+            message.Attachments.Add(new EmailAttachment(path));
+            await Email.ComposeAsync(message);
         }
     }
 }
